@@ -4,11 +4,7 @@
     box-sizing: border-box;
 }
 
-/* Layout base */
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+body {
     font-family: Arial, sans-serif;
     background: #f4f6f9;
 }
@@ -25,23 +21,20 @@ html, body {
 .menu {
     background: #34495e;
     padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .menu a {
     color: white;
-    margin: 0 15px;
+    margin: 5px 10px;
     text-decoration: none;
     font-weight: bold;
 }
 
-.menu a:hover {
-    color: #1abc9c;
-}
-
-/* CONTEÚDO */
+/* CONTAINER */
 .container {
-    flex: 1;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -55,16 +48,11 @@ html, body {
     padding: 25px;
     border-radius: 12px;
     width: 320px;
+    max-width: 100%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* TÍTULOS */
-.card h2 {
-    margin-bottom: 15px;
-    color: #2c3e50;
-}
-
-/* INPUTS */
+/* FORM */
 input, select {
     width: 100%;
     padding: 10px;
@@ -73,23 +61,62 @@ input, select {
     border: 1px solid #ccc;
 }
 
-/* BOTÃO */
 button {
     width: 100%;
     padding: 10px;
     background: #3498db;
     border: none;
     color: white;
-    font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
 }
 
-button:hover {
-    background: #2980b9;
+/* FOOTER */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
 }
 
-/* RODAPÉ */
+/* 📱 RESPONSIVIDADE */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .container {
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+
+    .topo h1 {
+        font-size: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        margin: 8px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
 footer {
     background: #2c3e50;
     color: white;
