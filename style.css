@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout base */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* TOPO */
+.topo {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* MENU */
+.menu {
+    background: #34495e;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #1abc9c;
+}
+
+/* CONTEÚDO */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* TÍTULOS */
+.card h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* RODAPÉ */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Presença</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOPO -->
+    <header class="topo">
+        <h1>📚 Sistema de Presença Escolar</h1>
+    </header>
+
+    <!-- MENU -->
+    <nav class="menu">
+        <a href="#">Início</a>
+        <a href="#">Alunos</a>
+        <a href="#">Chamada</a>
+        <a href="#">Relatórios</a>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <div class="container">
+
+        <!-- Cadastro -->
+        <div class="card">
+            <h2>Cadastro de Aluno</h2>
+            <form action="AlunoServlet" method="post">
+                <input type="text" name="nome" placeholder="Nome do aluno" required>
+                <input type="text" name="turma" placeholder="Turma" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Presença -->
+        <div class="card">
+            <h2>Registro de Presença</h2>
+            <form action="PresencaServlet" method="post">
+                <input type="number" name="idAluno" placeholder="ID do aluno" required>
+
+                <select name="presente">
+                    <option value="true">Presente</option>
+                    <option value="false">Faltou</option>
+                </select>
+
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2026 - Sistema de Presença Escolar</p>
+        <p>
+            Desenvolvido como projeto integrador com o objetivo de melhorar o controle 
+            de frequência escolar, tornando o processo mais eficiente e digital.
+        </p>
+    </footer>
+
+</body>
+</html>
