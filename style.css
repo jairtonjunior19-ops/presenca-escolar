@@ -120,6 +120,19 @@ footer {
         align-items: center;
         padding: 20px;
     }
+    /* CONTAINER MAIS INTELIGENTE (GRID) */
+.container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+/* CARDS ocupam melhor o espaço */
+.card {
+    width: 100%;
+}
 
     .card {
         width: 100%;
@@ -129,5 +142,43 @@ footer {
     footer {
         font-size: 12px;
         padding: 10px;
+    }
+}
+/* Celulares menores (até 480px) */
+@media (max-width: 480px) {
+
+    .topo {
+        padding: 10px;
+    }
+
+    .topo h1 {
+        font-size: 18px;
+    }
+
+    .menu {
+        padding: 5px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    input, select, button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 11px;
     }
 }
